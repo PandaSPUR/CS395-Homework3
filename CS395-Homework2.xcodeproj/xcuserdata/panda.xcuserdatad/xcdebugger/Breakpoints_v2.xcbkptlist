@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS395-Homework2/BlackjackGame.swift"
+            timestampString = "434266900.911585"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "shuffleDeck()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS395-Homework2/ViewController.swift"
+            timestampString = "434271455.891167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "betChanged(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS395-Homework2/ViewController.swift"
+            timestampString = "434271455.891167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "betPlaced(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS395-Homework2/ViewController.swift"
+            timestampString = "434271268.333022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS395_Homework2.ViewController.swipeRight.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISwipeGestureRecognizer&gt;"
+                  moduleName = "CS395-Homework2"
+                  urlString = "file:///Users/panda/Desktop/CS395/CS395-Homework2/CS395-Homework2/ViewController.swift"
+                  timestampString = "434271063.298914"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS395_Homework2.ViewController.swipeRight.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISwipeGestureRecognizer&gt;"
+                  moduleName = "CS395-Homework2"
+                  urlString = "file:///Users/panda/Desktop/CS395/CS395-Homework2/CS395-Homework2/ViewController.swift"
+                  timestampString = "434271063.2991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS395_Homework2.ViewController.init (CS395_Homework2.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; CS395_Homework2.ViewController"
+                  moduleName = "CS395-Homework2"
+                  urlString = "file:///Users/panda/Desktop/CS395/CS395-Homework2/CS395-Homework2/ViewController.swift"
+                  timestampString = "434271063.299314"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS395_Homework2.ViewController.init (CS395_Homework2.ViewController.Type)() -&gt; CS395_Homework2.ViewController"
+                  moduleName = "CS395-Homework2"
+                  urlString = "file:///Users/panda/Desktop/CS395/CS395-Homework2/CS395-Homework2/ViewController.swift"
+                  timestampString = "434271063.299503"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS395_Homework2.ViewController.init (CS395_Homework2.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; CS395_Homework2.ViewController"
+                  moduleName = "CS395-Homework2"
+                  urlString = "file:///Users/panda/Desktop/CS395/CS395-Homework2/CS395-Homework2/ViewController.swift"
+                  timestampString = "434271063.299625"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "257">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
