@@ -147,7 +147,6 @@ class Player {
         //If player busted completely, he loses.
         if handValues[0].count == 0{
             playerStatus = 4
-            endRound()
         }
     }
     

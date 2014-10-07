@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var startButton: UIButton!
     @IBOutlet var addPlayerButton: UIButton!
     
+    @IBOutlet var betButton: UIButton!
     @IBOutlet var betLabel: UILabel!
     @IBOutlet var betStepper: UIStepper!
     
@@ -33,24 +34,20 @@ class ViewController: UIViewController {
     var dealer = Dealer()
     
     var playerView = 0
-    /*
-    Game status flag.
-    0 = Round Start: Waiting for all players to bet.
-    1 = Hands Dealt: Waiting for all players to hit/stay/bust
-    2 = Stay: player is staying, has not lost/won yet. Disable all options.
-    3 = Win: Disable hit/stay, enable bet/deal.
-    4 = Lose: Disable hit/stay, enable bet/deal.
-    5 = Game over: player broke. Disable hit/stay, enable new game.
-    */
-    var gameStatus = 0
-    
     var gamesPlayed = 0
     
     func updateUI() {
         if playerView == players.count {
             addPlayerButton.hidden = false
-            addPlayerButton.enabled = true
+            if dealer.dealerStatus==0 {
+                addPlayerButton.enabled = true //true if dealer is waiting for bets.
+            }
+            else {
+                addPlayerButton.enabled = false
+            }
+            betButton.hidden = true
             
+            currentPlayerLabel.hidden = true
             playerStatusLabel.hidden = true
             cashLabel.hidden = true
             playerCardsLabel.hidden = true
@@ -61,8 +58,9 @@ class ViewController: UIViewController {
         }
         else {
             addPlayerButton.hidden = true
-            addPlayerButton.enabled = false
+            betButton.hidden = false
             
+            currentPlayerLabel.hidden = false
             playerStatusLabel.hidden = false
             cashLabel.hidden = false
             playerCardsLabel.hidden = false
@@ -70,6 +68,7 @@ class ViewController: UIViewController {
             hitButton.hidden = false
             betLabel.hidden = false
             betStepper.hidden = false
+            betStepper.value = 1.0
             
             currentPlayerLabel.text = "Player \(playerView + 1)"
             
@@ -82,10 +81,7 @@ class ViewController: UIViewController {
             }
             playerCardsLabel.text = playerCardsString
             cashLabel.text = "Cash: $\(players[playerView].bank)"
-            if players[playerView].bet != 0 {
-                betLabel.text = "$\(players[playerView].bet)"
-                betStepper.enabled = false
-            }
+            
             
             //Player Info: Based on playerStatus
             switch players[playerView].playerStatus {
@@ -93,24 +89,35 @@ class ViewController: UIViewController {
                 playerStatusLabel.text = "Waiting for all players to place bets"
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = true
-                betLabel.text = ""
+                if players[playerView].bet != 0 {
+                    betLabel.text = "Bet $\(players[playerView].bet)"
+                    betStepper.enabled = false
+                    betButton.enabled = false
+                }
+                else {
+                    betStepper.enabled = true
+                    betButton.enabled = true
+                    betLabel.text = "Bet $\(betStepper.value)?"
+                }
             case 1: //bet placed, hand dealt
                 playerStatusLabel.text = "Hit or Stay?"
                 stayButton.enabled = true
                 hitButton.enabled = true
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 betLabel.text = "Bet: $\(players[playerView].bet)"
             case 2: //staying
                 playerStatusLabel.text = "Waiting for other players"
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 betLabel.text = "Bet: $\(players[playerView].bet)"
             case 3: //won
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 if players[playerView].blackjack {
                     playerStatusLabel.text = "Blackjack!"
                     betLabel.text = "Won $\(players[playerView].bet * 1.5)"
@@ -123,19 +130,22 @@ class ViewController: UIViewController {
                 playerStatusLabel.text = "You lose."
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 betLabel.text = "Lost $\(players[playerView].bet)"
             case 5: //push
                 playerStatusLabel.text = "Push."
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 betLabel.text = " "
             case 6: //broke
                 playerStatusLabel.text = "You're broke!"
                 stayButton.enabled = false
                 hitButton.enabled = false
-                betLabel.enabled = false
+                betStepper.enabled = false
+                betButton.enabled = false
                 betLabel.text = " "
             default:
                 break
@@ -235,7 +245,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func betChanged(sender: AnyObject) {
-        betLabel.text = Int(betStepper.value).description
+        betLabel.text = "Bet $\(betStepper.value)?"
     }
     
     @IBAction func betPlaced(sender: AnyObject) {
@@ -254,7 +264,6 @@ class ViewController: UIViewController {
     @IBAction func hitTapped(sender: AnyObject) {
         players[playerView].hit(shoe)
         updateGame()
-        updateUI()
     }
     
     @IBAction func stayTapped(sender: AnyObject) {
@@ -277,6 +286,13 @@ class ViewController: UIViewController {
         if playerView > players.count {
             playerView = players.count
         }
+        updateUI()
+    }
+    @IBAction func addPlayer(sender: AnyObject) {
+        shoe.decks++
+        shoe.shuffleDeck()
+        gamesPlayed = 0
+        players.append(Player())
         updateUI()
     }
     

@@ -39,8 +39,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-32-Glw">
-                                <rect key="frame" x="269" y="45" width="64" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-32-Glw">
+                                <rect key="frame" x="268" y="45" width="64" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Start Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,8 +59,8 @@
                                     <action selector="hitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7R-KQ-0pw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cash" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-xo-XSA">
-                                <rect key="frame" x="41" y="351" width="29" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-xo-XSA">
+                                <rect key="frame" x="41" y="317" width="29" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,21 +77,30 @@
                                 <state key="normal" title="Add Player">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf2-my-YHy"/>
+                                </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XoS-XP-7c0">
-                                <rect key="frame" x="41" y="416" width="94" height="29"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XoS-XP-7c0">
+                                <rect key="frame" x="41" y="349" width="94" height="29"/>
                                 <connections>
                                     <action selector="betChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OyM-Zs-hPY"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxK-vK-OTg">
-                                <rect key="frame" x="76" y="387" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxK-vK-OTg">
+                                <rect key="frame" x="41" y="333" width="31" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-z4-FRY">
-                                <rect key="frame" x="59" y="445" width="59" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxC-Uz-9N5">
+                                <rect key="frame" x="279" y="526" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-z4-FRY">
+                                <rect key="frame" x="63" y="380" width="50" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Place Bet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,30 +109,29 @@
                                     <action selector="betPlaced:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VzH-AD-cKR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxC-Uz-9N5">
-                                <rect key="frame" x="279" y="526" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="XoS-XP-7c0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="10P-OI-Izg"/>
                             <constraint firstItem="Jc8-tt-I23" firstAttribute="top" secondItem="Sv4-V6-BJG" secondAttribute="bottom" constant="80" id="1zq-nm-sQO"/>
                             <constraint firstAttribute="centerY" secondItem="Sv4-V6-BJG" secondAttribute="centerY" id="2h9-Zs-gM8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YGg-cy-E9X" secondAttribute="bottom" constant="50" id="6Ym-R6-m9F"/>
+                            <constraint firstItem="FxK-vK-OTg" firstAttribute="top" secondItem="MzV-xo-XSA" secondAttribute="bottom" constant="1" id="BkG-yt-EyM"/>
                             <constraint firstAttribute="centerX" secondItem="aDI-K1-GfH" secondAttribute="centerX" id="Dd1-Yr-oCL"/>
                             <constraint firstItem="YGg-cy-E9X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="ENE-30-HtB"/>
                             <constraint firstItem="3fZ-32-Glw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="F0T-U7-lX1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bxC-Uz-9N5" secondAttribute="bottom" constant="53" id="FgK-3I-hvC"/>
                             <constraint firstAttribute="centerX" secondItem="bxC-Uz-9N5" secondAttribute="centerX" id="HkJ-Ud-L14"/>
-                            <constraint firstItem="NNB-z4-FRY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="JJA-ZV-cnN"/>
+                            <constraint firstItem="NNB-z4-FRY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="JJA-ZV-cnN"/>
                             <constraint firstItem="r1T-f9-bsU" firstAttribute="top" secondItem="3fZ-32-Glw" secondAttribute="bottom" constant="50" id="Muh-L2-O6U"/>
                             <constraint firstAttribute="centerX" secondItem="3fZ-32-Glw" secondAttribute="centerX" id="Ogk-lp-sHp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Br-UX-09U" secondAttribute="trailing" constant="50" id="UEp-tm-xtn"/>
-                            <constraint firstItem="NNB-z4-FRY" firstAttribute="top" secondItem="XoS-XP-7c0" secondAttribute="bottom" id="VkY-SQ-sNf"/>
+                            <constraint firstItem="NNB-z4-FRY" firstAttribute="top" secondItem="XoS-XP-7c0" secondAttribute="bottom" constant="2" id="VkY-SQ-sNf"/>
                             <constraint firstItem="MzV-xo-XSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="X1J-wE-Tk3"/>
+                            <constraint firstItem="XoS-XP-7c0" firstAttribute="top" secondItem="FxK-vK-OTg" secondAttribute="bottom" constant="1" id="ahl-4M-p3c"/>
+                            <constraint firstItem="MzV-xo-XSA" firstAttribute="top" secondItem="Sv4-V6-BJG" secondAttribute="bottom" constant="10" id="eSe-Q6-gGU"/>
+                            <constraint firstItem="FxK-vK-OTg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="gpH-xv-X2f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Br-UX-09U" secondAttribute="bottom" constant="50" id="m5N-GV-XNu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aDI-K1-GfH" secondAttribute="bottom" constant="125" id="pgW-E0-hDp"/>
                             <constraint firstAttribute="centerX" secondItem="r1T-f9-bsU" secondAttribute="centerX" id="qpb-Sv-wE1"/>
@@ -137,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="addPlayerButton" destination="aDI-K1-GfH" id="agb-rD-UYO"/>
+                        <outlet property="betButton" destination="NNB-z4-FRY" id="NSB-05-dtA"/>
                         <outlet property="betLabel" destination="FxK-vK-OTg" id="Vw9-AT-MeI"/>
                         <outlet property="betStepper" destination="XoS-XP-7c0" id="dsC-ha-muH"/>
                         <outlet property="cashLabel" destination="MzV-xo-XSA" id="Ghg-H0-ejl"/>
