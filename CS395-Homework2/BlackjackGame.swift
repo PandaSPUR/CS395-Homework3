@@ -12,6 +12,7 @@ struct Card {
     var suitString: String
     var value: Int
     var valueString: String
+    var imageString: String
 }
 
 class Shoe {
@@ -22,15 +23,15 @@ class Shoe {
         deck = [Card]()
         for n in 0..<decks {
             for i in 0..<4{
-                var suitStrings = ["Diamonds", "Clubs", "Hearts", "Spades"]
-                var valueStrings = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
+                var suitStrings = ["diamonds", "clubs", "hearts", "spades"]
+                var valueStrings = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"]
                 var tempValue: Int
                 for j in 1...13 {
                     tempValue = j
                     if tempValue > 10 {
                         tempValue = 10
                     }
-                    deck.append(Card(suit: i, suitString: suitStrings[i], value: tempValue, valueString: valueStrings[j-1]))
+                    deck.append(Card(suit: i, suitString: suitStrings[i], value: tempValue, valueString: valueStrings[j-1], imageString: (valueStrings[j-1] + "_of_" + suitStrings[i])))
                 }
             }
         }

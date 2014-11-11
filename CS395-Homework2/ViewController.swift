@@ -27,7 +27,20 @@ class ViewController: UIViewController {
     @IBOutlet var swipeRight: UISwipeGestureRecognizer!
     @IBOutlet var swipeLeft: UISwipeGestureRecognizer!
     
+    @IBOutlet var playerCard1: UIImageView!
+    @IBOutlet var playerCard2: UIImageView!
+    @IBOutlet var playerCard3: UIImageView!
+    @IBOutlet var playerCard4: UIImageView!
+    @IBOutlet var playerCard5: UIImageView!
     
+    @IBOutlet var dealerCard1: UIImageView!
+    @IBOutlet var dealerCard2: UIImageView!
+    @IBOutlet var dealerCard3: UIImageView!
+    @IBOutlet var dealerCard4: UIImageView!
+    @IBOutlet var dealerCard5: UIImageView!
+    
+    var playerCards = [UIImageView]()
+    var dealerCards = [UIImageView]()
     
     var shoe = Shoe()
     var players = [Player]()
@@ -55,6 +68,12 @@ class ViewController: UIViewController {
             hitButton.hidden = true
             betLabel.hidden = true
             betStepper.hidden = true
+            for var i = 0; i < playerCards.count; ++i {
+                playerCards[i].hidden = true
+            }
+            for var i = 0; i < dealerCards.count; ++i {
+                dealerCards[i].hidden = true
+            }
         }
         else {
             addPlayerButton.hidden = true
@@ -74,9 +93,14 @@ class ViewController: UIViewController {
             
             //Player Info: Always shown
             var playerCardsString = ""
+            for var i = 0; i < playerCards.count; ++i {
+                playerCards[i].hidden = true
+            }
             if players[playerView].playerStatus > 0 {
                 for var i = 0; i < players[playerView].hands[0].count; ++i {
-                    playerCardsString += "\(players[playerView].hands[0][i].valueString) of \(players[playerView].hands[0][i].suitString)\n"
+                    //playerCardsString += "\(players[playerView].hands[0][i].valueString) of \(players[playerView].hands[0][i].suitString)\n"
+                    playerCards[i].hidden = false;
+                    playerCards[i].image = UIImage(named: players[playerView].hands[0][i].imageString)
                 }
             }
             playerCardsLabel.text = playerCardsString
@@ -157,7 +181,9 @@ class ViewController: UIViewController {
                 dealerCardsLabel.text = ""
             case 1:
                 startButton.enabled = false
-                dealerCardsLabel.text = "\(dealer.hands[0][0].valueString) of \(dealer.hands[0][0].suitString)"
+                //dealerCardsLabel.text = "\(dealer.hands[0][0].valueString) of \(dealer.hands[0][0].suitString)"
+                dealerCards[0].hidden = false
+                dealerCards[0].image = UIImage(named: dealer.hands[0][0].imageString)
                 
             case 2, 3:
                 startButton.enabled = true
@@ -165,7 +191,9 @@ class ViewController: UIViewController {
                 
                 var dealerCardsString = ""
                 for var i = 0; i < dealer.hands[0].count; ++i {
-                    dealerCardsString += "\(dealer.hands[0][i].valueString) of \(dealer.hands[0][i].suitString)\n"
+                    //dealerCardsString += "\(dealer.hands[0][i].valueString) of \(dealer.hands[0][i].suitString)\n"
+                    dealerCards[i].hidden = false
+                    dealerCards[i].image = UIImage(named: dealer.hands[0][i].imageString)
                 }
                 dealerCardsLabel.text = dealerCardsString
             default:
@@ -307,6 +335,18 @@ class ViewController: UIViewController {
         shoe.shuffleDeck()
         players.append(Player())
         players.append(Player())
+        
+        playerCards.append(playerCard1)
+        playerCards.append(playerCard2)
+        playerCards.append(playerCard3)
+        playerCards.append(playerCard4)
+        playerCards.append(playerCard5)
+        
+        dealerCards.append(dealerCard1)
+        dealerCards.append(dealerCard2)
+        dealerCards.append(dealerCard3)
+        dealerCards.append(dealerCard4)
+        dealerCards.append(dealerCard5)
         
         updateGame()
     }

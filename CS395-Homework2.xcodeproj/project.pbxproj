@@ -11,7 +11,7 @@
 		BA29478D19E0C10100689F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29478C19E0C10100689F2E /* ViewController.swift */; };
 		BA29479019E0C10100689F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29478E19E0C10100689F2E /* Main.storyboard */; };
 		BA29479219E0C10100689F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA29479119E0C10100689F2E /* Images.xcassets */; };
-		BA29479E19E0C10100689F2E /* CS395_Homework2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29479D19E0C10100689F2E /* CS395_Homework2Tests.swift */; };
+		BA29479E19E0C10100689F2E /* CS395_HomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29479D19E0C10100689F2E /* CS395_HomeworkTests.swift */; };
 		BA2947A819E1A97D00689F2E /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2947A719E1A97D00689F2E /* BlackjackGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		BA29479119E0C10100689F2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA29479719E0C10100689F2E /* CS395-Homework2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CS395-Homework2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29479C19E0C10100689F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA29479D19E0C10100689F2E /* CS395_Homework2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS395_Homework2Tests.swift; sourceTree = "<group>"; };
+		BA29479D19E0C10100689F2E /* CS395_HomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS395_HomeworkTests.swift; sourceTree = "<group>"; };
 		BA2947A719E1A97D00689F2E /* BlackjackGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +98,7 @@
 		BA29479A19E0C10100689F2E /* CS395-Homework2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BA29479D19E0C10100689F2E /* CS395_Homework2Tests.swift */,
+				BA29479D19E0C10100689F2E /* CS395_HomeworkTests.swift */,
 				BA29479B19E0C10100689F2E /* Supporting Files */,
 			);
 			path = "CS395-Homework2Tests";
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA29479E19E0C10100689F2E /* CS395_Homework2Tests.swift in Sources */,
+				BA29479E19E0C10100689F2E /* CS395_HomeworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +335,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "CS395-Homework2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS395-Homework2";
 			};
 			name = Debug;
 		};
@@ -347,7 +347,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "CS395-Homework2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS395-Homework2";
 			};
 			name = Release;
 		};
@@ -365,7 +365,7 @@
 				);
 				INFOPLIST_FILE = "CS395-Homework2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS395-Homework2Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CS395-Homework2.app/CS395-Homework2";
 			};
 			name = Debug;
@@ -380,7 +380,7 @@
 				);
 				INFOPLIST_FILE = "CS395-Homework2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS395-Homework2Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CS395-Homework2.app/CS395-Homework2";
 			};
 			name = Release;
@@ -404,6 +404,7 @@
 				BA2947A319E0C10100689F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA2947A419E0C10100689F2E /* Build configuration list for PBXNativeTarget "CS395-Homework2Tests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +413,7 @@
 				BA2947A619E0C10100689F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
